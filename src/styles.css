@@ -75,3 +75,7 @@ footer {
   font-size: 30px;
   font-style: normal;
 }
+.footerLink {
+  text-align: center;
+  font-size: 15px;
+}
