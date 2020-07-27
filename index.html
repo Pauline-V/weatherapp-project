@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <span class="fullDoc">
+            <form class="form-inline" id="city-form">
+                <form class="form-inline">
+                    <div class="row">
+                        <div class="col-auto">
+                            <label class="text">Change city:</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="Search" class="form-control" autocomplete="off" id="city-input"></input>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="form-control btn btn-dark">Search</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-5">
+                        <h1 id="currentCity">Paris</h1>
+                        <h2 id="today">Friday, 26 June 5:00 PM <br /></h2>
+                        <p class="description">
+                            Sunny
+                        </p>
+                    </div>
+                    <div class="col-5">
+                        <ul>
+                            <li class="temperature">
+                                ⛈ <p class="temp">31</p><a href="#" class="celsius">°C</a>|<a href="#"
+                                    class="fahrenheit">°F</a>
+
+                            </li>
+                            <li>Feels like <span class="feelsLike">31</span></li>
+                            <li>Humidity <span class="humidity">31</span>%</li>
+                            <li>Wind <span class="wind">31</span>m/s</li>
+                        </ul>
+                    </div>
+                </div>
+                <br />
+                <h3>Forecast</h3>
+                <hr />
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Saturday</h5>
+                            <p class="card-text">⛅️ <br /><br />26°C / 16°C</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Sunday</h5>
+                            <p class="card-text">
+                                ☁️ <br /><br />
+                                23°C / 14°C
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Monday</h5>
+                            <p class="card-text">⛅️ <br /><br />23°C / 13°C</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tuesday</h5>
+                            <p class="card-text">⛅️ <br /><br />25°C / 16°C</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Wednesday</h5>
+                            <p class="card-text">⛅️ <br /><br />27°C / 16°C</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Thursday</h5>
+                            <p class="card-text">⛅️ <br /><br />26°C / 15°C</p>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-dark btn-sm">°C</button>
+                        <button type="button" class="btn btn-dark btn-sm">°F</button>
+                    </div>
+                    <button type="button" class="btn btn-dark btn-sm" id="currentLoc">
+                        Current location
+                    </button>
+                </footer>
+
+                <script src="src/index.js"></script>
+        </span>
+    </div>
+</body>
+
+</html>
